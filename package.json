@@ -1,0 +1,26 @@
+{
+  "name": "simple-router",
+  "version": "1.0.0",
+  "description": "simple-router",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "ssh://git@git.tuofeng.cn:10022/tuofeng/official-site.git"
+  },
+  "author": "jack.bai",
+  "license": "ISC",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-csso": "^1.0.1",
+    "gulp-file-include": "^0.13.7",
+    "gulp-load-plugins": "^1.2.0",
+    "gulp-replace": "^0.5.4",
+    "gulp-requirejs": "^0.1.3",
+    "run-sequence": "^1.1.5",
+    "through2": "^2.0.0"
+  }
+}
