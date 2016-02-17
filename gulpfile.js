@@ -1,13 +1,10 @@
 var gulp = require('gulp');
 var $ = require('gulp-load-plugins')();
 var through2 = require('through2');
-var del = require('del');
 //var browserSync = require('browser-sync').create();
 //var reload = browserSync.reload;
 var runSequence = require('run-sequence');
 
-//project config
-var sourceImg = '/Projects/tuofeng/slice/source/**/*.{png,jpg}';
 
 //watching script change to start default task
 gulp.task('watch', function () {

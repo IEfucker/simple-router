@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>simple router demo</title>
+    <meta name="viewport" content="width=750, target-densitydpi=device-dpi, user-scalable=no">
+    <meta name="format-detection" content="telephone=no">
+    <meta content="email=no" name="format-detection" />
+
+    <!-- styleSheet width version(or md5)-->
+    @@include("style-version.html")
+
+</head>
+<body ontouchstart="" style="visibility: hidden;">
+<div class="portrait">
+
+    <!--.view-home-->
+    @@include("home.html")
+    <!--end .view-home-->
+    
+    <!--.view-view1-->
+    @@include("view1.html")
+    <!--end .view-view1-->
+
+    <!--.view-view2-->
+    @@include("view2.html")
+    <!--end .view-view2-->
+
+    <!--.view-view3-->
+    @@include("view3.html")
+    <!--end .view-view3-->
+
+    <!--.view-view4-->
+    @@include("view4.html")
+    <!--end .view-view4-->
+
+    <!--cross button for sub-views-->
+    <a class="cross-btn">
+        <span class="icon-cross cross">返回</span>
+    </a>
+    <!--end cross button-->
+</div><!--end .portrait-->
+<div class="landscape" style="display:none;">
+    <div class="flexbox">
+        <span>竖屏体验更佳</span>
+    </div>
+</div>
+<!-- script with version(or md5)-->
+@@include("script-version.html")
+</body>
+</html>

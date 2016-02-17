@@ -7,7 +7,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "ssh://git@git.tuofeng.cn:10022/tuofeng/official-site.git"
+    "url": "https://github.com/IEfucker/simple-router.git"
   },
   "author": "jack.bai",
   "license": "ISC",

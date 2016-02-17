@@ -18,16 +18,16 @@ define(function(require, exports, module){
 
         function locationHashChanged(e){
             if(!isReady || !validateHash(formatHash(HashHandler.get()))) return;// not yet init or invalid hash
-            console.log(e);
+            //console.log(e);
             e && e.preventDefault();
 
 
             currentAction = formatHash(HashHandler.get());
-            console.log(currentAction);
+            //console.log(currentAction);
             updateRouter(currentAction);
-            console.log(r);
+            //console.log(r);
 
-            console.log(arguments[0].oldURL);
+            //console.log(arguments[0].oldURL);
             onChanged(currentAction, formatHash(HashHandler.getByURL(arguments[0].oldURL)));
 
         }
@@ -62,11 +62,11 @@ define(function(require, exports, module){
         _init();
 
         function updateRouter(hash){
-            console.log(r.path);
+            //console.log(r.path);
             if(hash !== r.path[r.path.length - 2]){
                 r.path.push(hash);
             }else{
-                console.log(1111);
+                //console.log(1111);
                 r.path.pop();
             }
             r.currentView = hash;
