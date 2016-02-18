@@ -8,11 +8,11 @@
 **/
 define(function (require, exports, module) {
     function createTap(){
-
-        var deltaX = deltaY = 0,
+        var deltaX = 0,
+            deltaY = 0,
             startPoint = {},
-            tapType = 'tap';
-
+            tapType = 'tap',
+            cancelled = false;
         document.body.addEventListener('touchstart', function (e) {
             startPoint['x'] = e.touches[0].clientX;
             startPoint['y'] = e.touches[0].clientY;
@@ -30,16 +30,28 @@ define(function (require, exports, module) {
             var el = e.target;
             if(deltaX < 20 && deltaY < 20){
                 //var tapEvent = new Event(tapType);
-                var tapEvent = new CustomEvent(tapType, {
+                var tapEvent = new Event(tapType, {
                         bubbles: true,
                         cancelable: true
                 });
-                var canceled  = el.dispatchEvent(tapEvent);
-                (!canceled) && e.preventDefault();
+                cancelled  = !el.dispatchEvent(tapEvent);
+                if(cancelled){
+                    e.preventDefault();
+                    return false;
+                }
             }
             deltaX = deltaY = 0;
         }, false);
+
+        //prevent link redirection in 'click' event
+        document.body.addEventListener('click', function(e){
+            if(cancelled){
+                e.preventDefault();
+                return false;
+            }
+        }, false);
     }
+
 
     return new createTap();
 
